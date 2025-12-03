@@ -1,0 +1,581 @@
+/* Primary Color Definitions */
+:root {
+    --primary-color: #16263d;
+    --primary-dark: #16263d;
+    --secondary-color: #16263d;
+}
+
+/* Button Styles */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.bg-primary:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Utility to prevent bg-primary hover darkening when used on specific elements */
+.no-hover-darken:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Utility to prevent white buttons from changing on hover (keep white) */
+.no-hover-white:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.hover\:border-primary:hover {
+    border-color: var(--primary-color) !important;
+}
+
+/* Text Color Fixes */
+.text-white {
+    color: white !important;
+}
+
+.text-gray-900 {
+    color: #111827 !important;
+}
+
+.text-gray-700 {
+    color: #374151 !important;
+}
+
+.text-gray-600 {
+    color: #4b5563 !important;
+}
+
+.text-gray-500 {
+    color: #6b7280 !important;
+}
+
+.text-gray-400 {
+    color: #9ca3af !important;
+}
+
+.text-gray-300 {
+    color: #d1d5db !important;
+}
+
+/* Button Rounded Class */
+.\!rounded-button {
+    border-radius: 8px !important;
+}
+
+/* Focus states for buttons */
+button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.focus\:ring-primary:focus {
+    --tw-ring-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(22, 38, 61, 0.1);
+}
+
+.focus\:border-primary:focus {
+    border-color: var(--primary-color) !important;
+}
+
+/* Hover effects */
+.hover\:bg-primary:hover {
+    background-color: var(--primary-color) !important;
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.hover\:bg-opacity-90:hover {
+    background-color: rgba(22, 38, 61, 0.9) !important;
+}
+
+.hover\:bg-gray-50:hover {
+    background-color: #f9fafb !important;
+}
+
+.hover\:bg-white:hover {
+    background-color: white !important;
+}
+
+/* Transition */
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-shadow {
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Cursor pointer for buttons */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button.cursor-pointer {
+    cursor: pointer;
+}
+
+a.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Background opacity fixes */
+.bg-opacity-10 {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-opacity-70 {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.bg-opacity-90 {
+    background-color: rgba(87, 181, 231, 0.9) !important;
+}
+
+/* Box shadow fixes */
+.shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional button fixes */
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(22, 38, 61, 0.1) !important;
+}
+
+/* Contact Us Button Styling */
+button.border-primary {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background-color: transparent;
+    transition: all 150ms ease;
+}
+
+button.border-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+button.border-primary:active {
+    background-color: var(--primary-dark) !important;
+}
+
+/* FAQ Accordion Styles */
+.faq-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.faq-icon {
+    display: inline-block;
+    transition: transform 300ms ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.faq-content {
+    display: block;
+    max-height: 1000px;
+    overflow: visible;
+    transition: max-height 300ms ease, opacity 300ms ease;
+    opacity: 1;
+}
+
+.faq-content.hidden {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Get Quote Button Styling */
+button[data-page="contact"] {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    transition: all 150ms ease;
+}
+
+button[data-page="contact"]:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Prevent hover color change on About "Who We Are" pill */
+.about-who-we-are-pill {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+.about-who-we-are-pill:hover {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+/* Prevent hover color change on main heading pills for other pages */
+.categories-main-pill,
+.blog-main-pill,
+.faq-main-pill,
+.contact-main-pill {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+.categories-main-pill:hover,
+.blog-main-pill:hover,
+.faq-main-pill:hover,
+.contact-main-pill:hover {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+/* Icon boxes where ALL hover effects should be disabled (no bg/color change) */
+.no-hover-icon-box {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+    transition: none !important;
+}
+
+.no-hover-icon-box:hover {
+    background-color: rgba(22, 38, 61, 0.1) !important;
+}
+
+.no-hover-icon-box i[class*="ri-"],
+.no-hover-icon-box [class*="ri-"] {
+    transition: none !important;
+    color: var(--primary-color) !important;
+}
+
+.no-hover-icon-box i[class*="ri-"]:hover,
+.no-hover-icon-box [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: none !important;
+}
+
+/* Home / CTA section WhatsApp button: add white border on hover */
+.home-final-cta-secondary:hover {
+    border-color: #ffffff !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+}
+
+/* About page final CTA buttons: use default button hover (no extra border rules) */
+
+/* Categories CTA "Get Quote" button: transparent border by default, white on hover */
+.categories-cta-get-quote-btn {
+    border-color: transparent !important;
+}
+
+.categories-cta-get-quote-btn:hover {
+    border-color: #ffffff !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+}
+
+/* Blog Subscribe button hover: invert to primary background with white text */
+.blog-subscribe-btn {
+    background-color: #ffffff !important;
+    color: var(--primary-color) !important;
+    border: 1px solid #ffffff !important;
+}
+
+.blog-subscribe-btn:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+button[data-page="contact"]:active {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* Home: Show only first row of collections (first 4 boxes) */
+section#categories .grid > div:nth-child(n+5) {
+    display: none;
+}
+
+/* Home Blog: show only the first row (3 articles on desktop) */
+#home-page #blog .home-blog-grid > article:nth-child(n+4) {
+    display: none;
+}
+
+/* Blog: initial article visibility controlled by JS (show 2 rows by default) */
+
+/* General border-primary styling for links/anchors (FAQ "Chat on WhatsApp") */
+.border-primary {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background-color: transparent;
+    transition: all 150ms ease;
+}
+
+.border-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.border-primary:active {
+    background-color: var(--primary-dark) !important;
+}
+/* Footer-specific link colors: keep links readable on dark background */
+footer .footer-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: color 150ms ease;
+}
+footer .footer-link:hover,
+footer a.footer-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+/* Prevent global hover:text-primary from making footer links too dark */
+footer .hover\:text-primary:hover {
+    color: #ffffff !important;
+}
+
+/* ===== COMPREHENSIVE ICON FIX - ENSURE ALL ICONS REMAIN VISIBLE ===== */
+
+/* ALL icon elements - base state: primary color */
+i[class*="ri-"] {
+    color: var(--primary-color) !important;
+}
+
+/* FOOTER CONTACT ICONS: Always white, NO color change */
+footer .flex.items-start.gap-4 i[class*="ri-"],
+footer .flex.items-center.gap-3 i[class*="ri-"],
+footer i[class*="ri-"] {
+    color: #ffffff !important;
+}
+
+/* Footer contact icons on hover: STAY white (no change) */
+footer .flex.items-start.gap-4:hover i[class*="ri-"],
+footer .flex.items-center.gap-3:hover i[class*="ri-"],
+footer *:hover i[class*="ri-"] {
+    color: #ffffff !important;
+}
+
+/* ===== INNER BOX HOVER FIX: ALL PAGES - Only icons change on direct hover ===== */
+
+/* Global: Force primary color on all icons by default */
+[class*="bg-opacity-10"] i[class*="ri-"],
+[class*="bg-opacity-10"] [class*="ri-"] {
+    color: var(--primary-color) !important;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for icons in bg-opacity containers */
+[class*="bg-opacity-10"] i[class*="ri-"]:hover {
+    color: var(--primary-dark) !important;
+    transform: scale(1.1);
+}
+
+/* === PADDING-BASED INNER BOXES (p-4, p-6, p-8, p-12) === */
+/* Remove hover effects from padding containers */
+.p-4 i[class*="ri-"],
+.p-4 [class*="ri-"],
+.p-6 i[class*="ri-"],
+.p-6 [class*="ri-"],
+.p-8 i[class*="ri-"],
+.p-8 [class*="ri-"],
+.p-12 i[class*="ri-"],
+.p-12 [class*="ri-"],
+.p-16 i[class*="ri-"],
+.p-16 [class*="ri-"] {
+    transition: all 0.2s ease;
+}
+
+/* Add hover effects only to icons */
+.p-4 i[class*="ri-"]:hover,
+.p-6 i[class*="ri-"]:hover,
+.p-8 i[class*="ri-"]:hover,
+.p-12 i[class*="ri-"]:hover,
+.p-16 i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+/* === SHADOW-BASED INNER BOXES === */
+/* Remove hover effects from shadow containers */
+.shadow-sm i[class*="ri-"],
+.shadow-sm [class*="ri-"],
+.shadow-md i[class*="ri-"],
+.shadow-md [class*="ri-"],
+.shadow-lg i[class*="ri-"],
+.shadow-lg [class*="ri-"] {
+    transition: all 0.2s ease;
+}
+
+/* Add hover effects only to icons */
+.shadow-sm i[class*="ri-"]:hover,
+.shadow-md i[class*="ri-"]:hover,
+.shadow-lg i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+/* === ROUNDED BORDER-BASED BOXES === */
+/* Remove hover effects from rounded containers */
+.rounded-lg i[class*="ri-"],
+.rounded-lg [class*="ri-"],
+.rounded-xl i[class*="ri-"],
+.rounded-xl [class*="ri-"],
+.rounded-2xl i[class*="ri-"],
+.rounded-2xl [class*="ri-"],
+.rounded-b-lg i[class*="ri-"],
+.rounded-b-lg [class*="ri-"] {
+    transition: all 0.2s ease;
+}
+
+/* Add hover effects only to icons */
+.rounded-lg i[class*="ri-"]:hover,
+.rounded-xl i[class*="ri-"]:hover,
+.rounded-2xl i[class*="ri-"]:hover,
+.rounded-b-lg i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+/* === BG-GRAY-50 INNER BOXES === */
+.bg-gray-50 i[class*="ri-"],
+.bg-gray-50 [class*="ri-"] {
+    transition: all 0.2s ease;
+}
+
+.bg-gray-50 i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+/* === BORDER-BASED BOXES === */
+[class*="border-gray"] i[class*="ri-"],
+[class*="border-gray"] [class*="ri-"] {
+    transition: all 0.2s ease;
+}
+
+[class*="border-gray"] i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+/* === FLEX/SPACE CONTAINERS - DIRECT HOVER ONLY === */
+/* Icon hover effects - only when directly hovering the icon */
+.flex.items-start.gap-4 i[class*="ri-"]:hover,
+.flex.items-start.gap-3 i[class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Remove text hover effects */
+.flex.items-start.gap-4:hover,
+.flex.items-start.gap-3:hover {
+    color: inherit !important;
+}
+
+/* === INLINE FLEX BADGES/PILLS === */
+.inline-flex i[class*="ri-"]:hover,
+.inline-flex [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* === TEXT-CENTER SECTIONS === */
+.text-center i[class*="ri-"]:hover,
+.text-center [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* === SPACE-BASED CONTAINERS === */
+.space-y-4 > div i[class*="ri-"]:hover,
+.space-y-4 > div [class*="ri-"]:hover,
+.space-y-6 > div i[class*="ri-"]:hover,
+.space-y-6 > div [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* === SPECIFIC PATTERN: Overflow-hidden rounded boxes === */
+.overflow-hidden i[class*="ri-"]:hover,
+.overflow-hidden [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* === GRID CHILDREN (Category cards, blog cards, etc.) === */
+.grid > div i[class*="ri-"]:hover,
+.grid > div [class*="ri-"]:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* === FOOTER LINK EXCEPTIONS === */
+footer .hover\:text-primary i[class*="ri-"],
+footer .hover\:text-primary [class*="ri-"] {
+    color: #ffffff !important;
+    transition: all 0.2s ease;
+}
+
+footer .hover\:text-primary:hover i[class*="ri-"],
+footer .hover\:text-primary:hover [class*="ri-"] {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
